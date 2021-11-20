@@ -7,11 +7,47 @@ import java.security.NoSuchAlgorithmException;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class Block {
+
     private String hash;
     private String previousHash;
     private String data;
     private long timeStamp;
     private int nonce;
+
+    public String getHash() {
+        return hash;
+    }
+    public void setHash(String hash) {
+        this.hash = hash;
+    }
+
+    public String getPreviousHash() {
+        return previousHash;
+    }
+    public void setPreviousHash(String previousHash) {
+        this.previousHash = previousHash;
+    }
+
+    public String getData() {
+        return data;
+    }
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public long getTimeStamp() {
+        return timeStamp;
+    }
+    public void setTimeStamp(long timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public int getNonce() {
+        return nonce;
+    }
+    public void setNonce(int nonce) {
+        this.nonce = nonce;
+    }
 
     //Logger logger = LoggerFactory.getLogger(Block.class);
     public Block(String data, String previousHash, long timeStamp) {
@@ -20,7 +56,6 @@ public class Block {
         this.timeStamp = timeStamp;
         this.hash = calculateBlockHash();
     }
-    // standard getters and setters
 
     public String calculateBlockHash() {
         String dataToHash = previousHash
@@ -50,4 +85,5 @@ public class Block {
         }
         return hash;
     }
+
 }
