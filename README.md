@@ -1,4 +1,4 @@
-Implement a Simple Blockchain in Java
+Implement a Simple Blockchain in Java (Unfinished)
 
 What should be done in this assignment?
 - You should use the articles linked below as reference to implement a Simple Blockchain in Java
